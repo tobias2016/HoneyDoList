@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HoneyDoList.SignUpPage" Title="Sign Up" BackgroundColor="White">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" WidthRequest="50" HorizontalOptions="FillAndExpand">
+			<Label Text="Todo" FontSize="35" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="15"/>
+			<Entry x:Name="firstnameEntry" Placeholder="First Name" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4"/>
+			<Entry x:Name="lastnameEntry" Placeholder="Last Name" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4"/>
+			<Entry x:Name="fullnameEntry" Placeholder="Full Name" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4"/>
+			<Entry x:Name="emailEntry" Placeholder="Email" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4"/>
+			<Entry x:Name="passwordEntry" Placeholder="Password" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4" IsPassword="true"/>
+			<Button Text="Register" Clicked="OnSignUpClicked" BackgroundColor="Blue" TextColor="White" BorderRadius="20" Margin="20"/>
+			<Label Text="Use of Todos constitutes acceptance of our" FontSize="13" TextColor="Gray" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+			<Button Text="Terms" Clicked="OnTermsClicked" BackgroundColor="White" TextColor="Blue" FontSize="13"/>
+			<Label Text="and" FontSize="13" TextColor="Gray" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+			<Button Text="Conditions" Clicked="OnConditionsClicked" BackgroundColor="White" TextColor="Blue" FontSize="13"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

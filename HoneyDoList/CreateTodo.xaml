@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HoneyDoList.CreateTodo" Title="Create New Todo">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" WidthRequest="50" HorizontalOptions="FillAndExpand">
+			<Entry x:Name="titleEntry" Placeholder="Title" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4"/>
+			<Entry x:Name="startdateEntry" Placeholder="Start Date" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4"/>
+			<Entry x:Name="sendToEntry" Placeholder="Send To" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4"/>
+			<Entry x:Name="descriptionEntry" Placeholder="Description" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="4"/>
+			<Button Text="Send New Todo" Clicked="OnSendNewTodoClicked" BackgroundColor="#2C70FF" TextColor="White" BorderRadius="20" Margin="4"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:HoneyDoList" xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" x:Class="HoneyDoList.MyTodo" Title="My Todos">
+	<ContentPage.Content>
+		<StackLayout Orientation="Horizontal">
+	        <ListView ItemsSource="{Binding Users}" CachingStrategy="RecycleElement" RowHeight="60" HasUnevenRows="false" ItemTapped="ItemTapped" IsPullToRefreshEnabled="false">
+	          <ListView.ItemTemplate>
+	            <DataTemplate>
+	              <ViewCell Height="60">
+	                <ContentView Padding="10,10">
+	                  <AbsoluteLayout>
+	                    <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+	                      <ContentView Padding="0" WidthRequest="54">
+	                        <AbsoluteLayout>
+<!--		                          <ActivityIndicator BindingContext="{x:Reference ProfilePhoto}" IsEnabled="{Binding IsLoading}" IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" HeightRequest="54" WidthRequest="54" VerticalOptions="Center" HorizontalOptions="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" />-->
+	                          <ic:CircleImage Source="{Binding SmallPhotoUrl}" x:Name="ProfilePhoto" BorderColor="#547799" BorderThickness="5" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="{Binding IsLoading, Source={x:Reference ProfilePhoto}, Converter={StaticResource BooleanInverter}}" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize" />
+	                        </AbsoluteLayout>
+	                      </ContentView>
+	                      <ContentView Padding="0,0,0,0">
+	                        <StackLayout Spacing="0">
+	                          <Label Text="{Binding Company}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+	                          <Label Text="{Binding JobTitle}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
+	                        </StackLayout>
+	                      </ContentView>
+	                    </StackLayout>
+	                  </AbsoluteLayout>
+	                </ContentView>
+	              </ViewCell>
+	            </DataTemplate>
+	          </ListView.ItemTemplate>
+	        </ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

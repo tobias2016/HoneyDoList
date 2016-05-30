@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:HoneyDoList" xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" x:Class="HoneyDoList.Dashboard" Title="Dashboard" BackgroundColor="White">
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text="Monthly Todo's" FontSize="17" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="20"/>
+			<StackLayout Orientation="Horizontal">
+				<Image Source="graph.png" HorizontalOptions="CenterAndExpand"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Completed" FontSize="13" TextColor="Gray" HorizontalOptions="CenterAndExpand" />
+				<Label Text="Pending" FontSize="13" TextColor="Gray" HorizontalOptions="CenterAndExpand"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Image Source="complete.png" HorizontalOptions="CenterAndExpand"/>
+				<Image Source="pending.png" HorizontalOptions="CenterAndExpand"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+		        <ListView ItemsSource="{Binding Users}" CachingStrategy="RecycleElement" RowHeight="60" HasUnevenRows="false" ItemTapped="ItemTapped" IsPullToRefreshEnabled="false">
+		          <ListView.ItemTemplate>
+		            <DataTemplate>
+		              <ViewCell Height="60">
+		                <ContentView>
+		                  <AbsoluteLayout>
+		                    <StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+		                      <ContentView Padding="0" WidthRequest="54">
+		                        <AbsoluteLayout>
+		                          <ic:CircleImage Source="{Binding SmallPhotoUrl}" x:Name="ProfilePhoto" BorderColor="#547799" BorderThickness="5" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="{Binding IsLoading, Source={x:Reference ProfilePhoto}, Converter={StaticResource BooleanInverter}}" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize" />
+		                        </AbsoluteLayout>
+		                      </ContentView>
+		                      <ContentView Padding="0,0,0,0">
+		                        <StackLayout Spacing="0">
+		                          <Label Text="{Binding Company}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+		                          <Label Text="{Binding JobTitle}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
+		                        </StackLayout>
+		                      </ContentView>
+		                    </StackLayout>
+		                  </AbsoluteLayout>
+		                </ContentView>
+		              </ViewCell>
+		            </DataTemplate>
+		          </ListView.ItemTemplate>
+		        </ListView>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

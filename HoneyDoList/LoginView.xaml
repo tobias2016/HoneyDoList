@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:HoneyDoList;assembly=HoneyDoList" x:Class="HoneyDoList.LoginView" Title="My Account" BackgroundColor="White">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" WidthRequest="50" HorizontalOptions="FillAndExpand">
+			<Label Text="Todo" FontSize="35" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="25"/>
+			<Entry x:Name="usernameEntry" Placeholder="Username" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="2"/>
+			<Entry x:Name="passwordEntry" Placeholder="Password" HeightRequest="40" WidthRequest="200" TextColor="Black" Margin="2" IsPassword="true"/>
+			<Button Text="Login" Clicked="OnLoginClicked" BackgroundColor="#2C70FF" TextColor="White" BorderRadius="20" Margin="2"/>
+			<Button Text="Sign Up" Clicked="OnSignUpClicked" BackgroundColor="#2C70FF" TextColor="White" BorderRadius="20" Margin="2"/>
+			<Button Text="Forgot Password?" Clicked="OnForgotClicked" BackgroundColor="White" TextColor="Gray" FontSize="13"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HoneyDoList.SettingPage" Title="Settings">
+	<ContentPage.Content>
+		<StackLayout>
+			<Grid Padding="5" RowSpacing="5" ColumnSpacing="5" >
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="50"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width=".5*"/>
+					<ColumnDefinition Width=".1*"/>
+					<ColumnDefinition Width=".4*"/>
+				</Grid.ColumnDefinitions>
+				<Label 
+					Grid.Row="0"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="15"
+					Text="Enable push notification"
+					TextColor="Black"
+					VerticalOptions="Center"/>
+				<Switch 
+					Grid.Row="0"
+					Grid.Column="2"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+				<Label 
+					Grid.Row="1"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="15"
+					Text="Receive new invite"
+					TextColor="Black"
+					VerticalOptions="Center"/>
+
+				<Switch 
+					Grid.Row="1"
+					Grid.Column="2"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+				<Label 
+					Grid.Row="2"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="15"
+					Text="Last seen status"
+					TextColor="Black"
+					VerticalOptions="Center"/>
+
+				<Switch 
+					Grid.Row="2"
+					Grid.Column="2"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+				<Label 
+					Grid.Row="3"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="15"
+					Text="Play sound when new message"
+					TextColor="Black"
+					VerticalOptions="Center"/>
+
+				<Switch 
+					Grid.Row="3"
+					Grid.Column="2"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+			</Grid>
+
+			<Grid Padding="1" RowSpacing="1" ColumnSpacing="1" >
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width=".10*"/>
+				</Grid.ColumnDefinitions>
+
+				<Button 
+					Grid.Row="0" 
+					Grid.Column="1" 
+					Text="Delete My Account" 
+					Clicked="OnDeleteClicked" 
+					BackgroundColor="#F13B31" 
+					TextColor="White" 
+					BorderRadius="5" 
+					FontAttributes="Bold" 
+					HeightRequest="50"
+					HorizontalOptions="Center"
+					VerticalOptions="Center"/>
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
